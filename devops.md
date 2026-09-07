@@ -12,6 +12,9 @@ service.
 - Vendor `sql.js` with both `sql-wasm.js` and `sql-wasm.wasm`, as in
   `../ch-poc-002/poc-browser/vendor/sql.js/`. SQLite runs in a dedicated Web
   Worker, not on the UI thread.
+- Vendor a small QR-code generator for pairing links. Use the browser's native
+  `CompressionStream` and `DecompressionStream` APIs to compact new signaling
+  links; retain decoding support for older uncompressed links.
 - Keep the UI's database calls behind a small promise-based worker client. The
   worker serializes requests, owns the sql.js database, validates game actions,
   and enables SQLite foreign keys.
