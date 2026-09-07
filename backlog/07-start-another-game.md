@@ -2,11 +2,14 @@
 
 ## Purpose
 
-Give a participant a simple path to begin a new game without losing completed local match history.
+Let both participants agree to a rematch without losing completed local match
+history.
 
 ## Acceptance criteria
 
-- After a match finishes, the application offers a clear way to start another game.
-- Starting another game creates a new match rather than altering the completed one.
+- After a match finishes, both players see a clear “Rematch?” choice.
+- The next match starts only after both players accept.
+- A rematch creates a new match rather than altering the completed one.
 - Previously completed matches remain available for local replay.
-- Starting another game uses the same invitation and reply-link pairing flow.
+- A rematch uses the existing connection; it does not create an invitation or
+  reply link.

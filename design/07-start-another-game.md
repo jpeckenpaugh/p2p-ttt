@@ -2,10 +2,10 @@
 
 ## User flow
 
-1. After a match finishes, a participant chooses to start another game.
-2. The application creates the next local match in the existing connected
-   series.
-3. The players begin the next match without another invitation or reply link.
+1. After a match finishes, both players see a clear “Rematch?” choice.
+2. Each player accepts or leaves the rematch unaccepted.
+3. After both accept, the application creates the next local match in the
+   existing connected series.
 
 ## Behavior and rules
 
@@ -16,6 +16,7 @@
 - X starts odd-numbered matches and O starts even-numbered matches.
 - Starting another game uses the existing connection; a new invitation begins
   a separate series at match 1.
+- A rematch begins only after both players have accepted it.
 
 ## States and acceptance criteria
 
@@ -23,3 +24,4 @@
 - The new match has a new record and prior completed matches remain replayable.
 - Both connected participants see the next match and its correct starting
   player.
+- If either player has not accepted, no next-match record is created.
