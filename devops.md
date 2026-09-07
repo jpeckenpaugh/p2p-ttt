@@ -47,6 +47,16 @@ service.
 - The local server only serves files. It has no API routes, per-game state, or
   signaling behavior.
 
+## Deploy cache busting
+
+- Before committing a GitHub Pages deployment, run `python3 release.py` and
+  commit the resulting `release.json` update with the release. The page fetches
+  that manifest without using its HTTP cache, then loads application modules at
+  a build-specific URL. This prevents a device from reusing a prior app module
+  after a refresh, despite GitHub Pages' normal static-asset cache lifetime.
+- The UI displays the loaded build identifier, so two people testing pairing
+  can confirm that both devices run the same release.
+
 ## Test setup
 
 - Require a current Chromium browser for the POC test environment, plus Node

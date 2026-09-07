@@ -1,8 +1,10 @@
-import {createClient} from './db/client.js';
+const buildId=new URL(import.meta.url).searchParams.get('v')||'unversioned';
+const {createClient}=await import(`./db/client.js?v=${encodeURIComponent(buildId)}`);
 
 const api=createClient(), $=s=>document.querySelector(s);
 let seriesId=null, role=null, isHost=false, pc=null, channel=null, connected=false, localRematch=false, peerRematch=false, scannerStream=null, scannerFrame=null, scannerLastFrame=0;
 const status=$('#status'), start=$('#start'), pairing=$('#pairing'), game=$('#game'), link=$('#link'), board=$('#board');
+$('#build').textContent=`Build ${buildId}`;
 const legacyEncode=value=>btoa(unescape(encodeURIComponent(JSON.stringify(value)))).replaceAll('+','-').replaceAll('/','_').replaceAll('=','');
 const legacyDecode=value=>JSON.parse(decodeURIComponent(escape(atob(value.replaceAll('-','+').replaceAll('_','/')+'='.repeat((4-value.length%4)%4)))));
 function bytesToText(bytes){let text='';for(let offset=0;offset<bytes.length;offset+=0x8000)text+=String.fromCharCode(...bytes.subarray(offset,offset+0x8000));return text;}
