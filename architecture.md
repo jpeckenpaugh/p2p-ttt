@@ -32,7 +32,7 @@ no per-game server state, API, database, account system, or signaling service.
 | Local game domain | Applies Tic-Tac-Toe rules, creates series and matches, derives board and outcome from ordered moves, and rejects invalid local actions. |
 | Local workspace | Durably stores this browser's series, matches, roles, ordered moves, outcomes, and data needed for replay. It is authoritative only for this participant's record. |
 | Link pairing | Creates an invitation from the host's connection information; creates a friend reply from the invitation; lets the host use the returned reply only with its matching local series. |
-| Direct game connection | Establishes the browser-to-browser session after the host opens the reply, carries game messages, and reports connection/disconnection to the UI. |
+| Direct game connection | Establishes the browser-to-browser session after the host applies the reply in the still-open invitation page, carries game messages, and reports connection/disconnection to the UI. |
 
 The local workspace and direct connection are separate concerns: persistence
 must remain available after a peer disconnects, while the connection exists
@@ -45,7 +45,8 @@ only for live play.
 2. The friend opens the link, creates their local record of that series with
    the complementary role, and creates a reply link.
 3. The friend returns the reply through an ordinary message channel.
-4. The host opens the reply in the matching local series. The browsers then
+4. The host applies the reply in the still-open invitation page for the
+   matching local series. The browsers then
    establish their direct game connection.
 
 Links contain only the information required for this manual connection ritual;

@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>P2P Tic-Tac-Toe</title><link rel="stylesheet" href="css/style.css"></head>
 <body><main><h1>Peer-to-peer Tic-Tac-Toe</h1><p id="status" role="status">Opening local workspace…</p><section id="start"><h2>Start a game</h2><p>Choose your piece, then send the invitation link to a friend.</p><button data-role="X">Play X</button><button data-role="O">Play O</button></section>
-<section id="pairing" hidden><h2 id="pairing-title">Invitation created</h2><p id="pairing-text"></p><label for="link">Share this link</label><textarea id="link" readonly></textarea><button id="copy">Copy link</button></section>
+<section id="pairing" hidden><h2 id="pairing-title">Invitation created</h2><p id="pairing-text"></p><label for="link">Share this link</label><textarea id="link" readonly></textarea><button id="copy">Copy link</button><div id="apply-reply" hidden><label for="reply-link">Paste your friend’s reply link here</label><textarea id="reply-link" placeholder="Paste reply link"></textarea><button id="apply-reply-button">Connect</button></div></section>
 <section id="game" hidden><p id="roles"></p><div id="board" aria-label="Tic-Tac-Toe board"></div><p id="result"></p><div id="rematch" hidden><button id="rematch-button">Rematch?</button><span id="rematch-status"></span></div></section>
 <section><h2>Completed matches</h2><div id="history">Loading…</div></section></main><script type="module" src="js/app.js"></script></body></html>

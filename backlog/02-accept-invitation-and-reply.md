@@ -10,4 +10,5 @@ Let a friend open a host's invitation link, prepare their local side of the matc
 - The application prepares a local match record for the friend.
 - The application presents a shareable reply link.
 - The friend can copy the reply link and send it outside the application.
-- The application clearly explains that the host must open the reply link next.
+- The application clearly explains that the host must apply the reply link in
+  the still-open invitation page.

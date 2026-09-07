@@ -31,7 +31,7 @@ Host browser                         Friend browser
 Create game
 Create invitation link ── text/email ──> Open invitation
                                         Create reply link
-Open reply link  <──── text/email ───── Send reply
+Apply reply link <──── text/email ───── Send reply
 
               Direct browser-to-browser game connection
 ```
@@ -61,9 +61,10 @@ ordinary channel.
 
 ### 3. Connect
 
-The host opens the reply link. The host’s existing game recognizes the match,
-completes the browser-to-browser connection, and shows a clear connected
-status to both people.
+The host keeps the invitation page open and applies the returned reply link
+there. The host’s existing game recognizes the match, completes the
+browser-to-browser connection, and shows a clear connected status to both
+people.
 
 Until the connection is established, the game should explain what each person
 needs to do next in plain language. A connection failure should be visible and
@@ -149,7 +150,8 @@ end-to-end story:
 
 1. The host creates an invitation link and sends it by text or email.
 2. The friend opens it and sends the generated reply link back.
-3. The host opens the reply link and the two browsers connect directly.
+3. The host applies the reply link in the still-open invitation page and the
+   two browsers connect directly.
 4. Both participants play a complete Tic-Tac-Toe match with matching boards.
 5. Each participant reloads the application and can still see and replay the
    completed match.

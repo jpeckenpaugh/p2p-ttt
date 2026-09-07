@@ -6,7 +6,7 @@
 2. The application identifies the action as joining a game and prepares the
    friend's local match record.
 3. It presents a shareable reply link and tells the friend to send it to the
-   host.
+   host, who keeps the invitation page open.
 
 ## Behavior and rules
 
@@ -19,8 +19,8 @@
 
 ## States and acceptance criteria
 
-- Before a reply is sent, the application clearly says that the host must open
-  it next.
+- Before a reply is sent, the application clearly says that the host must
+  apply it in the still-open invitation page.
 - An invalid or unusable invitation does not create a playable match; the
   visitor sees that joining cannot continue.
 - If reply-link creation fails, the app reports the failure rather than showing

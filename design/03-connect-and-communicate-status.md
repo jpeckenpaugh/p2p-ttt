@@ -2,7 +2,7 @@
 
 ## User flow
 
-1. The host opens the friend's reply link in the existing host game.
+1. The host pastes the friend's reply link into the still-open invitation page.
 2. The browsers establish their direct game connection.
 3. Both participants see that the game is connected and may begin play.
 
